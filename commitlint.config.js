@@ -12,7 +12,7 @@ module.exports = {
         const [tpId] = commitMessage.split('/')
         const tpIdRegex = /tp-([0-9]+)/g
         if (!tpIdRegex.test(tpId)) {
-          return [false, 'You need to fill TP card code.']
+          return [false, 'You need to fill TP card code. Please use commit message with someting like tp-221.']
         }
         return [true]
       },
